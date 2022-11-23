@@ -1,30 +1,32 @@
 {% url 'home' as url_home %}
+{% url 'team' as url_team %}
 {% url 'about' as url_about %}
 
-{% if request.path == url_home %}
 <div class="container">
     <header class="d-flex justify-content-center py-3">
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="{{url_home}}" class="nav-link active" aria-current="page">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="{{url_about}}" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="{{url_home}}" class="nav-link
+                {% if request.path == url_home %}
+                    active" aria-current="page">
+                {% else %}
+                ">
+                {% endif %}
+                Accueil</a></li>
+        <li class="nav-item"><a href="{{url_team}}" class="nav-link
+                {% if request.path == url_team %}
+                    active" aria-current="page">
+                    {% else %}
+                    ">
+                    {% endif %}
+                Qui sommes-nous ?</a></li>
+        <li class="nav-item"><a href="{{url_about}}" class="nav-link
+                {% if request.path == url_about %}
+                    active" aria-current="page">
+                {% else %}
+                    ">
+                {% endif %}
+                À propos</a></li>
       </ul>
     </header>
   </div>
-  {% endif %}
 
-  {% if request.path == url_about %}
-<div class="container">
-    <header class="d-flex justify-content-center py-3">
-      <ul class="nav nav-pills">
-        <li class="nav-item"><a href="{{url_home}}" class="nav-link">Home</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-        <li class="nav-item"><a href="{{url_about}}" class="nav-link active" aria-current="page">About</a></li>
-      </ul>
-    </header>
-  </div>
-  {% endif %}

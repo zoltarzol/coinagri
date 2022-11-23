@@ -24,3 +24,6 @@ def home_view(request):
 
 def about_view(request):
     return render(request,'divers/about_page.html')
+
+def team_view(request):
+    return render(request,'divers/team_page.html')
