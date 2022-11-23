@@ -6,6 +6,7 @@ class Features(models.Model):
             max_length = 100,
             null = False
             )
+    
     description = models.TextField(
             max_length = 500
             )
