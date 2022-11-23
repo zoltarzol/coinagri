@@ -3,7 +3,7 @@ from .functions import squared
 # Create your views here.
 
 def home_view(request):
-    weekdays = {
+    weekdays = [
         'Monday',
         'Tuesday',
         'Wednesday',
@@ -11,7 +11,7 @@ def home_view(request):
         'Friday',
         'Saturday',
         'Sunday'
-    }
+    ]
     context = {
             'test' : "Ceci est un test",
             'carre_6' : squared(6),
