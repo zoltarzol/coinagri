@@ -17,4 +17,7 @@ def home_view(request):
             'carre_6' : squared(6),
             'weekdays' : weekdays
     }
+
+    import pudb; pu.db()
+
     return render(request,'divers/home_page.html', context=context)
