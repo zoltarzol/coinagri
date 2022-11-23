@@ -18,6 +18,9 @@ def home_view(request):
             'weekdays' : weekdays
     }
 
-    import pudb; pu.db()
+    # import pudb; pu.db()
 
     return render(request,'divers/home_page.html', context=context)
+
+def about_view(request):
+    return render(request,'divers/about_page.html')
